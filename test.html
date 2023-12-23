@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body class="vehicle"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT2F6PQ" height="0"
+            width="0" style="display:nonevisibility:hidden"></iframe></noscript>
+    <div id="app">
+        <div class="container"></div>
+        <header class="container">
+            <section class="header">
+                <div class="row no-gutters">
+                    <div class="col-auto">
+                        <div class="logo-wrapper"><a href="https://biluppgifter.se" class="logo logo-image"
+                                title="Biluppgifter">B</a><a href="https://biluppgifter.se" class="logo logo-text"
+                                title="Biluppgifter">Biluppgifter</a></div>
+                    </div>
+                    <div class="col">
+                        <div class="search-wrapper">
+                            <h1 class="h4 mb-3">Sök fordon, värdering, ägare, besiktning
+                                och historik i bilregistret</h1>
+                            <form action="https://biluppgifter.se/fordon" method="get" id="search-form">
+                                <div class="input-group"><input type="text" class="form-control form-control-lg"
+                                        maxlength="20" autocomplete="off" spellcheck="false" id="search-inpt"
+                                        name="r" autofocus="autofocus" placeholder="Registreringsnummer"
+                                        aria-label="Registreringsnummer"><span class="input-group-btn"><button
+                                            class="btn btn-primary btn-lg" type="submit"><i class="fa fa-search"
+                                                aria-hidden="true"></i></button></span></div>
+                            </form>
+                            <p class="small">Totalt 14 260 085 sökbara fordon på registreringsnummer</p>
+                            <p class="small">Sök fordonsuppgifter i bilregistret på din bil eller fråga på annat
+                                fordon. Vem äger bilen? - Vi har svaret!</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="navigation-wrapper">
+                            <div class="navigation-item"><a id="modelregister-button" class="btn btn-primary
+                                    btn-lg" href="https://biluppgifter.se/filter" role="button"><i class="fa
+                                        fa-sliders" aria-hidden="true"></i></a></div>
+                            <div class="navigation-item dropdown"><a class="btn btn-secondary btn-lg"
+                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                    aria-expanded="false" title="Medlem"><i class="fa fa-user"
+                                        aria-hidden="true"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-auth">
+                                    <form class="form" action="https://biluppgifter.se/login" method="post"><input
+                                            type="hidden" name="_token"
+                                            value="cp3ub9h1ZL9NHekgdk0WtUZvwUdYwtxb724oqixf">
+                                        <div class="form-group "><input type="email" name="email"
+                                                class="form-control" placeholder="E-post" value required></div>
+                                        <div class="form-group "><input type="password" name="password"
+                                                class="form-control" placeholder="Lösenord" required></div>
+                                        <div class="form-check">
+                                            <label class="form-check-label"><input type="checkbox"
+                                                    class="form-check-input" name="remember">Kom ihåg
+                                                mig</label>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <button type="submit" class="btn btn-primary">Logga in</button>
+                                        </div>
+                                    </form>
+                                    <div class="dropdown-divider"></div>
+                                    <h6 class="dropdown-header">Inte medlem än?</h6><a class="dropdown-item"
+                                        href="/medlem/registrera" title="Bli medlem">Bli medlem</a>
+                                    <div class="dropdown-divider"></div>
+                                    <h6 class="dropdown-header">Glömt
+                                        lösenordet?</h6><a class="dropdown-item" href="/medlem/nollstall"
+                                        title="Återställ lösenord">Återställ lösenord</a>
+                                </div>
+                            </div>
+                            <div class="navigation-item dropdown"><a class="btn btn-warning btn-lg"
+                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                    aria-expanded="false" title="Information"><i class="fa fa-bars"
+                                        aria-hidden="true"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-links"><a
+                                        class="dropdown-item" href="/" title="Bilregister/Fordonsregister">Hem</a>
+                                    <div class="dropdown-divider">
+                                    </div><a class="dropdown-item" href="/medlem/loggain" title="Logga in">Logga
+                                        in</a><a class="dropdown-item" href="/medlem/registrera" title="Bli
+                                        medlem">Bli medlem</a><a class="dropdown-item" href="/favoriter"
+                                        title="Sparade favoriter">Sparade favoriter</a><a class="dropdown-item"
+                                        href="https://biluppgifter.se/filter" title="Avancerat sök i
+                                        modellregister">Avancerat sök <span class="badge badge-warning ml-1
+                                            text-white" style="vertical-align: text-top">beta</span></a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="/om"
+                                        title="Om bilregistret">Om Biluppgifter</a><a class="dropdown-item"
+                                        href="https://biluppgifter.se/produkter" title="Tjänster och
+                                        produkter">Produkter & tjänster</a><a class="dropdown-item" href="/kontakt"
+                                        title="Kontakta Biluppgifter - Sveriges bilregister">Kontakt</a><a
+                                        class="dropdown-item" href="/cookies" title="Cookies på Biluppgifter -
+                                        Sveriges bilregister">Cookies</a><a class="dropdown-item"
+                                        href="/integritetspolicy" title="Integritetspolicy på Biluppgifter - Sveriges
+                                        bilregister">Integritetspolicy</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item"
+                                        href="https://play.google.com/store/apps/details?id=se.biluppgifter.mob&amphl=en"
+                                        target="_blank" title="Ladda ner app för Android">App för Android</a><a
+                                        class="dropdown-item"
+                                        href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=977693421&ampmnt=8"
+                                        target="_blank" title="Ladda ner app för iOS">App för iOS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <div class="container"></div>
+        <main class="container"><noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9XHMHL"
+                    height="0" width="0" style="display:nonevisibility:hidden"> </iframe> </noscript>
+            <section class="vehicle">
+                <div class="row mb-3" id="box-broadcast">
+                    <div class="col-12">
+                        <div class="card card-broadcast">
+                            <p class="mb-0">Nu kan du hämta data via API eller fil.<a
+                                    href="https://biluppgifter.se/produkter">Läs mer...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-summary">
+                    <div class="col pr-0">
+                        <div class="card card-body mb-xs-4">
+                            <h1 class="card-title">Kia Optima</h1>
+                            <p class="lead mb-4">
+                                <i class="enlarge">En svart herrgårdsvagn av årsmodell 2020 som är i trafik.
+                                    Växellådan är automatisk och motorn är på <span class="text-nowrap">154 hk</span>
+                                    och drivs med bensin och el.<br><br><span>Vem äger bilen?<a href="#agare"
+                                            class="font-weight-bold">Se ägare i
+                                            Bilregistret!</a></span></i>
+                            </p>
+                            <section class="grade d-none d-md-block">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                        <h4>
+                                            <img src="/../images/history-info.png" width="24" /> Historik
+                                        </h4>
+                                        <div class="wrapper">
+                                            <p>Detta fordon har <b>8 st</b>registrerade
+                                                händelser i sin historik.<br><a href="#historik"
+                                                    id="history-link-top" class="font-weight-bold d-block mt-2">Visa
+                                                    historik</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                        <h4><img src="/../images/sale_kvd.png" width="24" /> Sälja bilen</h4>
+                                        <div class="wrapper">
+                                            <p>Vill du sälja din bil? Få ett
+                                                kostnadsfrittprisförslag och pengarna dagen efter!<br><a
+                                                    href="#salja-bilen" id="lead-link-top" class="font-weight-bold
+                                                    d-block mt-2">Anmäl intresse</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-0">
+                                        <h4><img src="/../images/sale_insplanet.png" width="24" /> Försäkra bilen
+                                        </h4>
+                                        <div class="wrapper">
+                                            <p>Rätt försäkring till rätt pris.<br>Jämför
+                                                försäkring och spara pengar.<br><a
+                                                    href="https://biluppgifter.se/redirect/insurance/PRA85Z?source=1"
+                                                    target="_blank" id="insplanet-link-top" class="font-weight-bold
+                                                    d-block mt-2" rel="nofollow">Jämför försäkring</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-auto pl-0">
+                        <section class="shourcuts">
+                            <div class="link maker-logo"><img data-maker="Kia" src="/images/maker/kia@2x.png">
+                            </div><a class="link star" id="star" title="Spara som favorit"
+                                href="javascript:BU.toggleStar('Kia§Optima§2019§PRA85Z')"><i class="fa fa-star fa-2x
+                                    d-block" aria-hidden="true"></i>Spara</a><a class="link"
+                                href="javascript:BU.resizeText(1)"><i class="fa fa-text-width fa-2x d-block"
+                                    aria-hidden="true"></i>Stor text</a><a class="link"
+                                href="https://biluppgifter.se/fordon/skriv-ut/eyJpdiI6IlhHVTVtK3g4REVTa3JYTkxXanRiY1E9PSIsInZhbHVlIjoiNXQ4T3prR2lCeHY0RW9YVHFza1Jxdz09IiwibWFjIjoiMGEyNTljYTA2ZTIxYTRlNWZjZGFlZjM4ZWE4ZDI3NzFjNGNlOTBmZDE5M2I2NzQ1ZTJkMjJmNzEzYWQ5NTc1YyIsInRhZyI6IiJ9"
+                                target="_blank"><i class="fa fa-print fa-2x d-block" aria-hidden="true"></i>Skriv
+                                ut</a>
+                        </section>
+                    </div>
+                </div>
+                <div class="row mb-4 d-block d-md-none">
+                    <div class="col pr-0">
+                        <div class="card card-body mb-xs-4">
+                            <section class="grade">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                        <h4><img src="/../images/history-info.png" width="24" />
+                                            Historik</h4>
+                                        <div class="wrapper">
+                                            <p>Detta fordon har <b>8
+                                                    st</b>registrerade händelser i sin historik.<br><a
+                                                    href="#historik" id="mobile-history-link-top"
+                                                    class="font-weight-bold d-block mt-2">Visa historik</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                        <h4><img src="/../images/sale_kvd.png" width="24" /> Sälja bilen</h4>
+                                        <div class="wrapper">
+                                            <p>Vill du sälja din bil? Få ett
+                                                kostnadsfrittprisförslag och pengarna dagen efter!<br><a
+                                                    href="#salja-bilen" id="mobile-lead-link-top"
+                                                    class="font-weight-bold d-block mt-2">Anmäl intresse</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-0">
+                                        <h4><img src="/../images/sale_insplanet.png" width="24" /> Försäkra bilen
+                                        </h4>
+                                        <div class="wrapper">
+                                            <p>Rätt försäkring till rätt pris.<br>Jämför
+                                                försäkring och spara pengar.<br><a
+                                                    href="https://biluppgifter.se/redirect/insurance/PRA85Z?source=1"
+                                                    target="_blank" id="mobile-insplanet-link-top"
+                                                    class="font-weight-bold d-block mt-2" rel="nofollow">Jämför
+                                                    försäkring</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="ad-text">Annons</p>
+                        <div id="biluppgiftere_pano1_6" class="ad-desktop-center d-none d-lg-block d-xl-block">
+                        </div>
+
+                        <script
+                            type="text/javascript"> lwhbeg.cmd.push(function () { lwhbeg.loadAd({ tagId: 'biluppgiftere_pano1_6', keywords: { "pos": "panorama1", "ar": "2019", "kaross": "herrgardsvagn", "motoreffekt": "113", "drivmedel": "laddhybrid", "fabrikat": "Kia", "modell": "Optima", } }) })</script>
+
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-related">
+                    <div class="col-12">
+                        <div class="card card-body card-related">
+                            <h2 class="card-title title-icon mb-4">Liknande
+                                fordon till salu</h2>
+                            <section id="related" class="history enlarge"></section>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-data">
+                    <div class="col-12">
+                        <div class="card card-body card-data">
+                            <h2 class="card-title title-icon mb-4">Fordonsdata
+                            </h2>
+                            <ul class="list-data enlarge">
+                                <li><span class="label">Fabrikat</span><span class="value">Kia</span></li>
+                                <li><span class="label">Modell</span><span class="value">Optima</span></li>
+                                <li>
+                                    <span class="label">Fordonsår / Modellår</span><span class="value"><span
+                                            id="data-vehicle-year">2019</span> / <span
+                                            id="data-model-year">2020</span></span>
+                                </li>
+                                <li><span class="label">Registreringsnummer</span><span class="value">PRA85Z</span>
+                                </li>
+                                <li><span class="label">Chassinr /
+                                        VIN</span><span class="value">KNAGV81FBL5046591</span></li>
+                                <li><span class="label">Stöldstatus Sverige</span><span class="value">Ej
+                                        rapporterat stulet</span></li>
+                                <li><span class="label">Stöldstatus EU &
+                                        Nordamerika</span><span class="value"><a href="#!"
+                                            id="stolen-report-link-data" data-toggle="modal"
+                                            data-target="#modal-theft"><strong>Kontrollera</strong></a></span>
+                                </li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span>
+                                </li>
+                                <li><span class="label">Motorkod</span><span class="value"><a
+                                            href="https://biluppgifter.se/medlem/loggain?return=https%3A%2F%2Fbiluppgifter.se%2Ffordon%2FPRA85Z"><strong>Logga
+                                                in</strong></a></span></li>
+                                <li><span class="label">Tecdoc
+                                        ID</span><span class="value"><a
+                                            href="https://biluppgifter.se/medlem/loggain?return=https%3A%2F%2Fbiluppgifter.se%2Ffordon%2FPRA85Z"><strong>Logga
+                                                in</strong></a></span></li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span></li>
+                                <li>
+                                    <span class="label">Status</span><span class="value"
+                                        id="data-traffic-status">I trafik</span>
+                                </li>
+                                <li id="vehicle-not-imported-data"><span class="label">Import /
+                                        Införsel</span><span class="value" id="data-section-imported"><span
+                                            class="vehicle-not-imported-data">Nej</span></span></li>
+                                <li><span class="label">Först registrerad</span><span
+                                        class="value">2019-12-20</span></li>
+                                <li><span class="label">Trafik i
+                                        Sverige</span><span class="value">2021-01-19</span></li>
+                                <li><span class="label">Antal ägare</span><span class="value">1</span></li>
+                                <li>
+                                    <span class="label">Senaste ägarbyte</span><span class="value">2021-01-19</span>
+                                </li>
+                                <li><span class="label">Nästa
+                                        besiktning senast</span><span class="value">2024-01-31</span></li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span></li>
+                                <li><span class="label">Miljöklass</span><span class="value">Hybrid</span>
+                                </li>
+                                <li><span class="label">Utsläppsklass</span><span class="value">Laddhybrid</span>
+                                </li>
+                                <li><span class="label">Försäkring</span><span class="value"><a
+                                            id="insplanet-link-data"
+                                            href="https://biluppgifter.se/redirect/insurance/PRA85Z?source=2"
+                                            target="_blank"><strong>Jämför försäkring</strong></a></span></li>
+                                <li><span class="label">Årlig skatt</span><span class="value">360 SEK</span>
+                                </li>
+                                <li><span class="label">Skattemånad</span><span class="value">Oktober</span></li>
+                                <li><span class="label">Kreditköp</span><span class="value"
+                                        id="data-credit">Nej</span></li>
+                                <li><span class="label">Leasad</span><span class="value"
+                                        id="data-leasing">Ja</span></li>
+                                <li><span class="label">Obetalda
+                                        skatter / avgifter</span><span class="value"><a
+                                            href="#skuldkontroll"><strong>Kontrollera</strong></a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><a id="salja-bilen"></a>
+                <div class="row mb-4" id="box-lead">
+                    <div class="col-12">
+                        <div class="card card-body card-lead card-widget">
+                            <h2 class="card-title mb-4">Intresserad av att sälja din bil?</h2>
+                            <div class="row">
+                                <div class="col-sm-12 col-md">
+                                    <p class="enlarge">Sälj din bil via oss och få
+                                        bäst betalt. Vi garanterar en smidig process med bud inom 24 timmar.</p>
+                                    <p class="enlarge">Din intresseanmälan är kostnadsfri.</p>
+                                    <p class="enlarge">Oroa dig inte över ålder eller skick – vi förmedlar
+                                        handlarbud för alla typer av bilar.</p>
+                                    <ul class="list-unstyled text-muted row mt-md-5">
+                                        <li class="col-12 col-md-6 pr-0"><i class="fa fa-star"
+                                                style="color:#FFD150"></i>Bud inom 24 timmar</li>
+                                        <li class="col-12 col-md-6 pr-0"><i class="fa fa-star"
+                                                style="color:#FFD150"></i>Vi köper oavsett skick</li>
+                                        <li class="col-12 col-md-6 pr-0"><i class="fa fa-star"
+                                                style="color:#FFD150"></i>Anmälan är ej bindande</li>
+                                        <li class="col-12 col-md-6 pr-0"><i class="fa fa-star"
+                                                style="color:#FFD150"></i>Trygg och snabb betalning</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <div class="wrapper">
+                                        <div id="lead-content">
+                                            <section id="lead-step-create">
+                                                <div class="form-group"><input type="text" class="form-control"
+                                                        id="lead-regnr" placeholder="Ange regnummer" required></div>
+                                                <div class="form-group"><input type="number" class="form-control"
+                                                        id="lead-mileage" placeholder="Ange miltal" required>
+                                                </div>
+                                                <div class="form-group"><input type="text" class="form-control"
+                                                        id="lead-phone" placeholder="Ange telefonnummer*"
+                                                        required><small class="text-muted">*
+                                                        Telefonnumret måste kunna ta emot SMS</small></div>
+                                                <div class="form-group"><input type="checkbox" class="mr-2"
+                                                        id="lead-terms" value="1" required>Jag godkänner<a
+                                                        href="#" data-toggle="modal"
+                                                        data-target="#lead-tos-modal">villkoren</a></div>
+                                                <div class="text-center mb-3 hidden" id="lead-message"></div>
+                                                <button type="submit" class="btn btn-primary btn-block"
+                                                    id="lead-submit-create">Gratis intresseanmälan</button>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-equipment" data-attribute-status="isGuest">
+                    <div class="col-12" id="equipment-div">
+                        <div class="card card-body card-equipment">
+                            <h2 class="card-title title-icon mb-4">Utrustning</h2>
+                            <p class="enlarge"><strong>Just nu!</strong>
+                                Se komplett utrustningslista för<strong>PRA85Z</strong>.Informationen hämtas direkt
+                                från Kia och visar vilkenutrustning bilen hade när den byggdes.</p>
+                            <p class="enlarge mb-0">Tillgänglig för inloggade medlemmar kostnadsfritt.<a
+                                    href="https://biluppgifter.se/login?return=https%3A%2F%2Fbiluppgifter.se%2Ffordon%2FPRA85Z"
+                                    id="equipment-widget-login" class="font-weight-bold">Logga in</a>eller<a
+                                    href="https://biluppgifter.se/register?return=https%3A%2F%2Fbiluppgifter.se%2Ffordon%2FPRA85Z"
+                                    id="equipment-widget-register" class="font-weight-bold">Bli medlem</a></p>
+                        </div>
+                    </div>
+                </div><a id="agare"></a>
+                <div class="row mb-4" id="box-owner">
+                    <div class="col-12">
+                        <div class="card card-body card-owner">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="card-title title-icon mb-4">Vem äger bilen?</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="enlarge">
+                                        Fordonet ägs av en privatpersonfrån Uppsala.Personenhar ägt fordonet i
+                                        2år och 11 månader.</p>
+                                    <p class="enlarge">Det finns inga ytterligare
+                                        fordon registrerade på denna ägare.</p>
+                                    <p class="enlarge"><a class="gtm-merinfo"
+                                            href="http://www.merinfo.se/person/Uppsala/Asa-Astrid-Maria-Hellstrom-1972/bqo7l-2whwx?utm_source=biluppgifter&amputm_medium=owner&amputm_term=person"
+                                            rel="follow" target="_blank">Visa kompletta ägaruppgifter på
+                                            Merinfo.se</a></p>
+                                    <h4 class="mt-4 mb-4 blue-text">Ägarhistorik</h4>
+                                    <section class="history enlarge">
+                                        <div class="row no-gutters event-" data-date="2021-01-19">
+                                            <div class="col-auto align-self-center history-icon"><img
+                                                    src="/images/owner@2x.png"></div>
+                                            <div class="col">
+                                                <div class="date pull-right enlarge">2021-01-19
+                                                </div>
+                                                <div class="title font-weight-bold enlarge">Ägarbyte</div>
+                                                <div class="content enlarge">Privatperson från Uppsala<div
+                                                        class="d-block"><a
+                                                            href="http://www.merinfo.se/person/Uppsala/Asa-Astrid-Maria-Hellstrom-1972/bqo7l-2whwx?utm_source=biluppgifter&amputm_medium=owner&amputm_term=person"
+                                                            rel="follow" target="_blank"><b>Visa
+                                                                uppgifter</b></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row no-gutters event-" data-date="2019-12-20">
+                                            <div class="col-auto align-self-center history-icon"><img
+                                                    src="/images/owner@2x.png"></div>
+                                            <div class="col">
+                                                <div class="date pull-right enlarge">2019-12-20</div>
+                                                <div class="title font-weight-bold enlarge">Ägarbyte</div>
+                                                <div class="content enlarge">Företag från Upplands Väsby<div
+                                                        class="d-block"><a
+                                                            href="http://www.merinfo.se/foretag/Kia-Sweden-AB-5566188545/2k1yqkh-gmfv?utm_source=biluppgifter&amputm_medium=owner&amputm_term=company"
+                                                            rel="follow" target="_blank"><b>Visa
+                                                                uppgifter</b></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="de-sidebar"></div>
+                <a id="forsakring"></a>
+                <div class="row mb-4" id="box-insurance">
+                    <div class="col-12">
+                        <div class="card card-body card-insurance">
+                            <h2 class="card-title mb-4">Försäkring</h2>
+                            <div id="insurance-form" class="row bg-light-blue rounded align-items-center mx-0 py-3">
+                                <div class="col-12 col-md-7">
+                                    <div class="row">
+                                        <div class="col-12 text-center text-md-left mb-2"><span
+                                                class="font-weight-bold" style="font-size: 18px">Vad kostar
+                                                bilförsäkringen till min bil?</span></div>
+                                        <div class="col-12 col-md">
+                                            <div class="licenseplate mx-auto mx-md-0 mb-3 mb-md-0"><img
+                                                    src="/images/licenseplate.svg" class="licenseplate-img" width
+                                                    height="46"><input class="licenseplate-input" type="text"
+                                                    id="insurance-regno" name="regno" maxlength="6"
+                                                    placeholder="ABC123" data-default="PRA85Z" value="PRA85Z">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md"><select id="insurance-type" class="form-control
+                                                mx-auto mx-md-0 mb-3 mb-md-0" name="type">
+                                                <option value="1">
+                                                    Helförsäkring</option>
+                                                <option value="2">Halvförsäkring</option>
+                                                <option value="3">Trafikförsäkring</option>
+                                            </select></div>
+                                        <div class="col-12 col-md text-center text-md-left"><a href
+                                                id="insurance-url" class="btn btn-primary btn-block mx-auto mx-md-0
+                                                mb-3 mb-md-0" target="_blank" rel="nofollow">Jämför
+                                                försäkring</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <div class="row">
+                                        <div class="col-12 text-center text-md-left mb-2"><span id="insurance-cost"
+                                                class="insurance-cost">&nbsp</span></div>
+                                        <div class="col-12 col-md text-center text-md-left"><span
+                                                id="insurance-text" class="d-block mb-1 mb-md-0">Hämtar
+                                                uppgifter...</span><span id="insurance-year" class="d-block mb-3
+                                                mb-md-0"></span></div>
+                                        <div class="col-12 col-md text-center text-md-left"><img
+                                                src="/images/logos/compricer_logga_125.png" alt width="125"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><a id="skuldkontroll"></a>
+                <div class="row mb-4" id="box-debt">
+                    <div class="col-12">
+                        <div class="card card-body card-debt card-widget">
+                            <h2 class="card-title mb-4">Skuld</h2>
+                            <div class="row">
+                                <div class="col-sm-12 col-md">
+                                    <p class="enlarge">Fordonet kan ha obetald
+                                        fordonsskatt, trängselskatt ellerfelparkeringsavgift. Om det finns en skuld
+                                        kan Kronofogdenta fordonet i anspråk för att betala av tidigare
+                                        ägarensskulder. Kontrollera om fordonet har en aktuell skuld medvår
+                                        skuldkontroll. Fyll i ditt telefonnummer och betalaenkelt med Swish.</p>
+                                    <p class="price">Pris: 49 kr <span class="text-muted">(inkl.moms)</span><a
+                                            href="https://biluppgifter.se/skuldkontroll/villkor"
+                                            target="_blank">Våra villkor</a></p>
+                                </div>
+                                <div class="col">
+                                    <div class="wrapper">
+                                        <form id="debt-form"><input type="hidden" id="debt-regnr"
+                                                value="PRA85Z"><input type="hidden" id="debt-vin"
+                                                value="KNAGV81FBL5046591"><img src="/images/swish_logo_small.png"
+                                                class="pull-right mb-3" width="105" height="32" title="Betala med
+                                                Swish" alt="Betala med Swish">
+                                            <div class="form-group"><input type="text" class="form-control"
+                                                    id="debt-phone" placeholder="Ange telefonnummer*" value><small
+                                                    class="text-muted">* Telefonnumret
+                                                    måste vara anslutet till Swish</small></div>
+                                            <div class="text-center mb-3 hidden" id="debt-message"></div><button
+                                                type="submit" class="btn btn-primary btn-block"
+                                                id="debt-submit">Beställ skuldkontroll via SMS</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-valuation">
+                    <div class="col-12" id="valuation-div">
+                        <div class="card card-body card-valuation">
+                            <h2 class="card-title title-icon mb-4">Uppskattat pris på bil</h2>
+                            <div id="valuation-section-div">
+                                <div class="valuation-pending" style="display: block"><em>Hämtar pris...</em></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-loan"></div><a id="historik"></a>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="ad-text">Annons</p>
+                        <div id="biluppgiftere_pano2_9" class="ad-desktop-center d-none d-lg-block d-xl-block">
+                        </div>
+                        <script
+                            type="text/javascript"> lwhbeg.cmd.push(function () { lwhbeg.loadAd({ tagId: 'biluppgiftere_pano2_9', keywords: { "pos": "panorama2", "ar": "2019", "kaross": "herrgardsvagn", "motoreffekt": "113", "drivmedel": "laddhybrid", "fabrikat": "Kia", "modell": "Optima", } }) })</script>
+
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-history">
+                    <div class="col-12">
+                        <div class="card card-body card-history">
+                            <h2 class="card-title title-icon mb-4">Historik
+                            </h2>
+                            <section id="history" class="history enlarge"></section>
+                            <div id="history-message" class="text-center mb-4"><i class="fa fa-spinner fa-spin
+                                    fa-1x mb-3"></i><br><span class="text-muted">Hämtar historik...</span></div>
+                            <p class="small text-muted mb-0 mt-2">Historiken är hämtad från flera källor, det är
+                                en återspeglingav tillgänglig data från utvalda leverantörer och är inte alltid
+                                komplett.</p>
+                            <p class="small text-muted mb-0" id="nmvits-disclaimer" style="display:none"><a
+                                    href="https://www.vehiclehistory.gov/" rel="nofollow">National Motor Vehicle
+                                    Information Title System</a>innehåller
+                                information om 96% av alla fordon från USA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4" id="box-technical">
+                    <div class="col-12">
+                        <div class="card card-body card-technical">
+                            <h2 class="card-title title-icon mb-4">Teknisk data</h2>
+                            <ul class="list-data mb-4 enlarge">
+                                <li><span class="label">Motoreffekt</span><span class="value">154 hk / 113 kW</span>
+                                </li>
+                                <li><span class="label">Motorvolym</span><span class="value">1999
+                                        cm<sup>3</sup></span></li>
+                                <li><span class="label">Toppfart</span><span class="value">192 km/h</span></li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span></li>
+                                <li>
+                                    <span class="label">Drivmedel</span><span class="value">Bensin, El</span>
+                                </li>
+                                <li><span class="label">Växellåda</span><span class="value">Automatisk</span></li>
+                                <li><span class="label">Fyrhjulsdrift</span><span class="value">Nej</span></li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span></li>
+                                <li><span class="label">Ljudnivå körning</span><span class="value">72
+                                        dB</span></li>
+                                <li><span class="label">Passagerare</span><span class="value">4 st + förare</span>
+                                </li>
+                                <li><span class="label">Airbag
+                                        passagerare</span><span class="value">Ja</span></li>
+                                <li><span class="label">Draganordning</span><span class="value">Nej</span></li>
+                            </ul>
+                            <h3 class="card-subtitle title-icon mb-4">Dimensioner</h3>
+                            <ul class="list-data mb-4 enlarge">
+                                <li><span class="label">Färg</span><span class="value">Svart</span></li>
+                                <li><span class="label">Kaross</span><span id="technical-data-chassi"
+                                        class="value">Herrgårdsvagn</span></li>
+                                <li><span class="label">Längd</span><span class="value">4855 mm</span></li>
+                                <li>
+                                    <span class="label">Bredd</span><span class="value">1860 mm</span>
+                                </li>
+                                <li><span class="label">Höjd</span><span class="value">1465 mm</span></li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span></li>
+                                <li><span class="label">Tjänstevikt</span><span class="value">1876 kg</span>
+                                </li>
+                                <li><span class="label">Totalvikt</span><span class="value">2270
+                                        kg</span></li>
+                                <li><span class="label">Lastvikt</span><span class="value">Max 394 kg</span></li>
+                                <li><span class="label">Släpvagnsvikt obromsad</span><span class="value">Max 750
+                                        kg</span></li>
+                                <li><span class="label">Släp totalvikt (B)</span><span class="value">Max 1230
+                                        kg(Teoretisk)</span></li>
+                                <li><span class="label">Släp totalvikt (B+)</span><span class="value">Max 1980
+                                        kg(Teoretisk)</span></li>
+                                <li><span class="label">&nbsp</span><span class="value">&nbsp</span></li>
+                                <li>
+                                    <span class="label">Axelavstånd</span><span class="value">2805 mm</span>
+                                </li>
+                                <li><span class="label">Däck fram</span><span class="value">215/55R1794V</span></li>
+                                <li><span class="label">Däck
+                                        bak</span><span class="value">215/55R1794V</span></li>
+                                <li><span class="label">Fälg fram</span><span class="value">7.0JX17/ET50/C</span>
+                                </li>
+                                <li><span class="label">Fälg bak</span><span class="value">7.0JX17/ET50/C</span>
+                                </li>
+                            </ul>
+                            <h3 class="card-subtitle mb-4">Övrigt</h3>
+                            <ul class="list-data enlarge">
+                                <li><span class="label">Fordonskategori EU</span><span class="value">M1</span>
+                                </li>
+                                <li><span class="label">Typgodkännandenr.</span><span
+                                        class="value">e4*2007/46*1018*11</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <div class="modal fade" id="modal-equipment" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content overflow-hidden">
+                        <div class="modal-header">
+                            <h5 class="modal-title mb-0">Utrustning</h5><button type="button" class="close"
+                                data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-4">Vi saknar information från tillverkaren om detta fordon. Detta kan
+                                beropå att vi saknar stöd för just denna tillverkare eller att fordonet ärför
+                                gammalt. Vi jobbar hela tiden på att förbättra vår täckning.</p>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-primary"
+                                data-dismiss="modal">Jag förstår</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="lead-tos-modal" tabindex="-1" role="dialog"
+                aria-labelledby="lead-tos-modal-label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="lead-tos-modal-label">Sälja bilen - villkor</h5><button
+                                type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="description">
+                                <p>Genom att fylla i detta formulär så delger jag
+                                    Biluppgiftermitt samtycke att dela med sig av min information till tredjepart.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal-theft" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content overflow-hidden">
+                        <div class="modal-header">
+                            <h5 class="modal-title mb-0">Stöldrapport för PRA85Z</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-4">Undvik att bli lurad och kontrollera ett fordon
+                                i förväg. Vår databas omfattar 13 länder i Nordamerika och EU från nationella
+                                polismyndigheter och organisationer.<br><br>Ett stulet fordon skall återlämnas och
+                                köparen av ett stulet fordon får ingen ersättning.</p>
+                            <div class="bg-light-blue p-3 p-md-4">
+                                <form id="theft-form"><input type="hidden" id="theft-regnr"
+                                        value="PRA85Z"><input type="hidden" id="theft-vin"
+                                        value="KNAGV81FBL5046591"><img src="/images/swish_logo_small.png"
+                                        class="pull-right mb-3" width="105" height="32" title="Betala med Swish"
+                                        alt="Betala med Swish">
+                                    <div class="form-group"><input type="text" class="form-control"
+                                            id="theft-phone" placeholder="Ange telefonnummer*" value><small
+                                            class="text-muted">* Telefonnumret måste
+                                            vara anslutet till Swish</small></div>
+                                    <div class="text-center mb-3 hidden" id="theft-message"></div><button
+                                        type="submit" class="btn btn-primary btn-block" id="theft-submit">Beställ
+                                        stöldrapport via
+                                        SMS</button>
+                                </form>
+                            </div>
+                            <p class="text-center mt-3 mb-0">
+                                <strong>Pris: 19 kr</strong> <span class="text-muted">(inkl.moms)</span><a
+                                    href="https://biluppgifter.se/fordonsrapport/villkor" class="orange-link
+                                    font-weight-bold" target="_blank">Våra villkor</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="container mt-4">
+            <p class="small text-center text-muted mb-1">
+                Ansvarig utgivare: <a id="footerGreyLink" href="/om">Christian Nilsson utsedd av Biluppgifter
+                    Sverige AB</a></p>
+            <p class="small text-center text-muted mb-1">Totalt 14 260 085 sökbara
+                fordon på registreringsnummer</p>
+            <p class="small text-center text-muted mb-1">Fråga på annat
+                fordon i bilregistret och få information från Transportstyrelsen fordonsuppgifter</p>
+            <p class="small text-center text-muted mb-4">Databasens namn: Biluppgifter, biluppgifter.se</p>
+        </footer>
+</body>
+
+</html>
