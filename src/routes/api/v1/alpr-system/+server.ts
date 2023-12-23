@@ -66,53 +66,53 @@ export const POST: RequestHandler = async ({ request }) => {
         }
 
 
-        let make
+        let make: any = "-"
 
-        let model
+        let model: any = "-"
 
-        let carYearModelYear
+        let carYearModelYear: any = "-"
 
-        let VIN
+        let VIN: any = "-"
 
         let status: any = await page.evaluate(() => document.querySelector("#data-traffic-status")?.innerHTML) as string
 
-        let enviromentClass
+        let enviromentClass: any = "-"
 
-        let emissionClass
+        let emissionClass: any = "-"
 
-        let yearlyTax
+        let yearlyTax: any = "-"
 
-        let creditPurchase
+        let creditPurchase: any = "-"
 
-        let leased
+        let leased: any = "-"
 
-        let color
+        let color: any = "-"
 
-        let carBody
+        let carBody: any = "-"
 
-        let lengthMm
+        let lengthMm: any = "-"
 
-        let widthMm
+        let widthMm: any = "-"
 
-        let heightMm
+        let heightMm: any = "-"
 
-        let totalWeight
+        let totalWeight: any = "-"
 
-        let serviceWeight
+        let serviceWeight: any = "-"
 
-        let EUCarCategory
+        let EUCarCategory: any = "-"
 
-        let motorEffect
+        let motorEffect: any = "-"
 
-        let topSpeed
+        let topSpeed: any = "-"
 
-        let fuel
+        let fuel: any = "-"
 
-        let shiftBox
+        let shiftBox: any = "-"
 
-        let fourWheelDrive
+        let fourWheelDrive: any = "-"
 
-        let imported
+        let imported: any = "-"
 
         for (let i = 0; i < content.length; i++) {
             if (content[i].label == "Fabrikat") {
@@ -160,7 +160,7 @@ export const POST: RequestHandler = async ({ request }) => {
             } else if (content[i].label == "Fyrhjulsdrift") {
                 fourWheelDrive = content[i].value
             } else if (content[i].label == "Import / Införsel") {
-                make = content[i].value
+                imported = content[i].value
             }
         }
 
@@ -195,6 +195,7 @@ export const POST: RequestHandler = async ({ request }) => {
             imported
         })
     } catch (e) {
+        console.log(e)
         throw error(500)
     }
 };
