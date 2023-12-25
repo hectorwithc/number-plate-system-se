@@ -26,6 +26,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-vercel": "^4.0.3",
 		"axios": "^1.6.2",
-		"puppeteer": "^21.6.1"
+		"puppeteer": "^21.6.1",
+		"puppeteer-core": "^21.6.1"
 	}
 }
