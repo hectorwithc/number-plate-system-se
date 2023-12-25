@@ -349,5 +349,5 @@
             <p class="text-gray-800">Sök på en nummer plåt...</p>
         {/if}
     </div>
-    <audio src="/cdn/beep_beep.mp3" bind:this={audio}></audio>
+    <audio src="/cdn/simple-beep.mp3" bind:this={audio}></audio>
 </div>
