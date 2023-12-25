@@ -1,5 +1,6 @@
 <script lang="ts">
     import axios from 'axios'
+    import { beforeUpdate } from 'svelte';
 
     const regex2 = new RegExp(/^[a-z]$/)
 
@@ -7,6 +8,7 @@
     let error: any;
     let loading: boolean = false;
     let regNr: string = "";
+    let audio: any;
 
     async function onInput(e: any) {
         const char: string = e.data
@@ -25,6 +27,15 @@
         .then(function (response) {
             loading = false
             data = response.data
+            
+            // Play audio if any marks
+            if (data.isStolen == true) {
+                audio.play()
+            } else if (data.status != "I trafik") {
+                audio.play()
+            }
+
+            regNr = ""
         })
         .catch(function (e) {
             loading = false
@@ -37,11 +48,11 @@
     <div class="bg-gray-200 rounded-lg p-4">
         <h1 class="font-bold text-2xl mb-2">Number Plate System (SE)</h1>
 
-        <form on:submit|preventDefault>
+        <form on:submit|preventDefault class="flex space-x-1 items-center">
             <input type="text" on:input={(e) => { onInput(e) }} bind:value={regNr} class="text-lg p-2 mr-2 outline-none border-gray-400 border-2 bg-gray-100" placeholder="ABC123">
 
             {#if loading}
-                <button class="py-2 px-2 btn font-semibold text-lg cursor-wait opacity-75">
+                <button class="py-2 px-4 btn font-semibold text-lg cursor-wait opacity-75">
                     <div class="flex items-center space-x-2">
                         <svg class="animate-spin" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor" /><path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor" /></svg>
                         <p>Sök</p>
@@ -334,8 +345,9 @@
                     </a>
                 </div>
             </div>
-        {:else if !data && !loading}
+        {:else if !data && !loading && !error}
             <p class="text-gray-800">Sök på en nummer plåt...</p>
         {/if}
     </div>
+    <audio src="/cdn/beep_beep.mp3" bind:this={audio}></audio>
 </div>
