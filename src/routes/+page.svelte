@@ -1,6 +1,6 @@
 <script lang="ts">
-    import axios from 'axios'
-    import { beforeUpdate } from 'svelte';
+    import { beforeUpdate } from "svelte";
+    import axios from "axios";
 
     const regex2 = new RegExp(/^[a-z]$/)
 
