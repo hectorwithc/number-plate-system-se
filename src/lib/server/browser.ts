@@ -1,3 +1,5 @@
 import puppeteer from 'puppeteer'
 
-export const browser = await puppeteer.launch({ headless:false })
+export const browser = await puppeteer.launch({
+    headless: true
+})
